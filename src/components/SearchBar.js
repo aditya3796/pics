@@ -9,10 +9,10 @@ class SearchBar extends React.Component {
     onInputClick() {
         console.log('Input was clicked');
     }*/
-    onFormSubmit(event) {
+    onFormSubmit = (event) => {
         event.preventDefault();
 
-        console.log(this.state.term);
+        this.props.onSubmit(this.state.term);
     }
     render() {
         return (
